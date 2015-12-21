@@ -1,0 +1,36 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{B9D2EB31-BB6D-4B35-BFA9-83B76B7578D1}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="FTSERVICE.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="FTSERVICE">
+        <MSBuild Projects="FTSERVICE.dproj"/>
+    </Target>
+    <Target Name="FTSERVICE:Clean">
+        <MSBuild Projects="FTSERVICE.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FTSERVICE:Make">
+        <MSBuild Projects="FTSERVICE.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="FTSERVICE"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="FTSERVICE:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="FTSERVICE:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
