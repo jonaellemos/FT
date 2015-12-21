@@ -9435,6 +9435,7 @@ object GerarLigacao: TGerarLigacao
       item
         Expanded = False
         FieldName = 'PROTOCOLO'
+        Width = 64
         Visible = True
       end>
   end
