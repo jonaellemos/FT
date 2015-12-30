@@ -3,8 +3,8 @@ object GerarLigacao: TGerarLigacao
   Top = 0
   BorderIcons = [biSystemMenu, biMinimize]
   Caption = 'GERECIAMENTO DE ATENDIMENTO - TELEFONE'
-  ClientHeight = 583
-  ClientWidth = 918
+  ClientHeight = 520
+  ClientWidth = 700
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -16,10 +16,10 @@ object GerarLigacao: TGerarLigacao
   PixelsPerInch = 96
   TextHeight = 17
   object Image1: TImage
-    Left = 0
-    Top = -2
-    Width = 921
-    Height = 577
+    Left = -192
+    Top = -5
+    Width = 918
+    Height = 689
     ParentShowHint = False
     Picture.Data = {
       0954506E67496D61676589504E470D0A1A0A0000000D49484452000004970000
@@ -9262,66 +9262,67 @@ object GerarLigacao: TGerarLigacao
       9DFF3F5002A455D4E275FA0000000049454E44AE426082}
     Proportional = True
     ShowHint = False
+    Stretch = True
   end
   object Label2: TLabel
     Left = 8
-    Top = 16
+    Top = 3
     Width = 82
     Height = 17
     Caption = 'LOJA PROCFIT:'
   end
   object Label3: TLabel
-    Left = 25
-    Top = 46
+    Left = 8
+    Top = 57
     Width = 62
     Height = 17
     Caption = 'TELEFONE:'
   end
   object Label5: TLabel
-    Left = 25
-    Top = 77
+    Left = 8
+    Top = 105
     Width = 56
     Height = 17
     Caption = 'ASSUNTO:'
   end
   object Label4: TLabel
-    Left = 210
-    Top = 17
+    Left = 170
+    Top = 3
     Width = 56
     Height = 17
     Caption = 'GERENTE:'
   end
   object Label6: TLabel
-    Left = 434
-    Top = 17
+    Left = 328
+    Top = 3
     Width = 38
     Height = 17
     Caption = 'EMAIL:'
   end
   object Label7: TLabel
-    Left = 683
-    Top = 17
+    Left = 170
+    Top = 51
     Width = 30
     Height = 17
     Caption = 'CNPJ:'
   end
   object Label8: TLabel
-    Left = 261
-    Top = 46
+    Left = 527
+    Top = 3
     Width = 92
     Height = 17
     Caption = 'TELEFONE FIXO:'
   end
   object Label9: TLabel
-    Left = 518
-    Top = 47
+    Left = 366
+    Top = 51
     Width = 66
     Height = 17
     Caption = 'ENDERE'#199'O:'
   end
   object Image2: TImage
-    Left = 887
-    Top = 265
+    Left = 666
+    Top = 295
     Width = 24
     Height = 24
     AutoSize = True
@@ -9388,9 +9389,9 @@ object GerarLigacao: TGerarLigacao
   end
   object DBGrid1: TDBGrid
     Left = 8
-    Top = 296
-    Width = 901
-    Height = 281
+    Top = 326
+    Width = 682
+    Height = 191
     DataSource = DMS.DT3
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
     TabOrder = 0
@@ -9435,13 +9436,12 @@ object GerarLigacao: TGerarLigacao
       item
         Expanded = False
         FieldName = 'PROTOCOLO'
-        Width = 64
         Visible = True
       end>
   end
   object Panel1: TPanel
     Left = 8
-    Top = 255
+    Top = 285
     Width = 902
     Height = 4
     Color = clHighlight
@@ -9449,51 +9449,51 @@ object GerarLigacao: TGerarLigacao
     TabOrder = 11
   end
   object lojaproc: TEdit
-    Left = 93
-    Top = 12
-    Width = 98
+    Left = 8
+    Top = 26
+    Width = 156
     Height = 25
     TabOrder = 1
     OnExit = lojaprocExit
   end
   object gerente: TEdit
-    Left = 272
-    Top = 13
+    Left = 171
+    Top = 26
     Width = 151
     Height = 25
     TabOrder = 12
   end
   object email: TEdit
-    Left = 478
-    Top = 13
+    Left = 328
+    Top = 26
     Width = 193
     Height = 25
     TabOrder = 13
   end
   object cnpj: TEdit
-    Left = 716
-    Top = 13
+    Left = 170
+    Top = 74
     Width = 193
     Height = 25
     TabOrder = 14
   end
   object telfixo: TEdit
-    Left = 359
-    Top = 43
-    Width = 153
+    Left = 527
+    Top = 26
+    Width = 158
     Height = 25
     TabOrder = 15
   end
   object endereco: TEdit
-    Left = 590
-    Top = 44
+    Left = 366
+    Top = 74
     Width = 319
     Height = 25
     TabOrder = 16
   end
   object check_atendimento: TCheckBox
-    Left = 158
-    Top = 228
+    Left = 73
+    Top = 254
     Width = 136
     Height = 17
     Caption = 'Gerar Atendimento'
@@ -9501,8 +9501,8 @@ object GerarLigacao: TGerarLigacao
     OnClick = check_atendimentoClick
   end
   object check_visita: TCheckBox
-    Left = 286
-    Top = 228
+    Left = 201
+    Top = 254
     Width = 136
     Height = 17
     Caption = 'Gerar Visita Tecnica'
@@ -9510,8 +9510,8 @@ object GerarLigacao: TGerarLigacao
     OnClick = check_visitaClick
   end
   object check_serint: TCheckBox
-    Left = 419
-    Top = 228
+    Left = 334
+    Top = 254
     Width = 96
     Height = 17
     Caption = 'Gerar SERINT'
@@ -9519,8 +9519,8 @@ object GerarLigacao: TGerarLigacao
     OnClick = check_serintClick
   end
   object check_outros: TCheckBox
-    Left = 93
-    Top = 228
+    Left = 8
+    Top = 254
     Width = 57
     Height = 17
     Caption = 'Outros'
@@ -9528,16 +9528,16 @@ object GerarLigacao: TGerarLigacao
     OnClick = check_outrosClick
   end
   object assunto: TMemo
-    Left = 93
-    Top = 75
-    Width = 816
-    Height = 147
+    Left = 8
+    Top = 128
+    Width = 682
+    Height = 120
     Hint = 'Digite o assunto'
     TabOrder = 3
   end
   object telefone: TMaskEdit
-    Left = 93
-    Top = 43
+    Left = 8
+    Top = 74
     Width = 156
     Height = 25
     EditMask = '!\(99\)00000-0000;1;_'
@@ -9547,8 +9547,8 @@ object GerarLigacao: TGerarLigacao
     TextHint = 'Movimentos Anteriores'
   end
   object Button1: TButton
-    Left = 696
-    Top = 224
+    Left = 475
+    Top = 254
     Width = 215
     Height = 25
     Caption = 'PROCESSAR - ATENDIMENTO'
@@ -9556,8 +9556,8 @@ object GerarLigacao: TGerarLigacao
     OnClick = Button1Click
   end
   object buscarmovimento: TMaskEdit
-    Left = 700
-    Top = 265
+    Left = 479
+    Top = 295
     Width = 153
     Height = 25
     Hint = 'Movimento Anterior'
@@ -9570,8 +9570,8 @@ object GerarLigacao: TGerarLigacao
     TextHint = 'Movimentos Anteriores'
   end
   object Button2: TButton
-    Left = 854
-    Top = 265
+    Left = 633
+    Top = 295
     Width = 32
     Height = 25
     Caption = 'OK'
