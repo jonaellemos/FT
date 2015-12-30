@@ -9266,7 +9266,7 @@ object GerarLigacao: TGerarLigacao
   end
   object Label2: TLabel
     Left = 8
-    Top = 3
+    Top = 6
     Width = 82
     Height = 17
     Caption = 'LOJA PROCFIT:'
@@ -9287,14 +9287,14 @@ object GerarLigacao: TGerarLigacao
   end
   object Label4: TLabel
     Left = 170
-    Top = 3
+    Top = 6
     Width = 56
     Height = 17
     Caption = 'GERENTE:'
   end
   object Label6: TLabel
     Left = 328
-    Top = 3
+    Top = 6
     Width = 38
     Height = 17
     Caption = 'EMAIL:'
@@ -9308,7 +9308,7 @@ object GerarLigacao: TGerarLigacao
   end
   object Label8: TLabel
     Left = 527
-    Top = 3
+    Top = 6
     Width = 92
     Height = 17
     Caption = 'TELEFONE FIXO:'
@@ -9405,37 +9405,40 @@ object GerarLigacao: TGerarLigacao
         Expanded = False
         FieldName = 'IDLIGACAO'
         Title.Caption = 'ID'
-        Width = 40
-        Visible = True
+        Width = -1
+        Visible = False
       end
       item
         Expanded = False
         FieldName = 'LOJAPROC'
         Title.Caption = 'PROCFIT'
+        Width = 55
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'TELEFONECONTATO'
         Title.Caption = 'CONTATO'
-        Width = 120
+        Width = 95
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'ASSUNTO'
-        Width = 379
+        Width = 394
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'DATAGERADA'
-        Width = 150
-        Visible = True
+        Title.Caption = 'DATA'
+        Width = -1
+        Visible = False
       end
       item
         Expanded = False
         FieldName = 'PROTOCOLO'
+        Width = 118
         Visible = True
       end>
   end
@@ -9492,8 +9495,8 @@ object GerarLigacao: TGerarLigacao
     TabOrder = 16
   end
   object check_atendimento: TCheckBox
-    Left = 73
-    Top = 254
+    Left = 75
+    Top = 258
     Width = 136
     Height = 17
     Caption = 'Gerar Atendimento'
@@ -9501,8 +9504,8 @@ object GerarLigacao: TGerarLigacao
     OnClick = check_atendimentoClick
   end
   object check_visita: TCheckBox
-    Left = 201
-    Top = 254
+    Left = 203
+    Top = 258
     Width = 136
     Height = 17
     Caption = 'Gerar Visita Tecnica'
@@ -9510,8 +9513,8 @@ object GerarLigacao: TGerarLigacao
     OnClick = check_visitaClick
   end
   object check_serint: TCheckBox
-    Left = 334
-    Top = 254
+    Left = 336
+    Top = 258
     Width = 96
     Height = 17
     Caption = 'Gerar SERINT'
@@ -9519,8 +9522,8 @@ object GerarLigacao: TGerarLigacao
     OnClick = check_serintClick
   end
   object check_outros: TCheckBox
-    Left = 8
-    Top = 254
+    Left = 10
+    Top = 258
     Width = 57
     Height = 17
     Caption = 'Outros'
