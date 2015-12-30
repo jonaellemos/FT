@@ -1,8 +1,8 @@
 object DMS: TDMS
   OldCreateOrder = False
   OnCreate = DataModuleCreate
-  Height = 393
-  Width = 220
+  Height = 591
+  Width = 896
   object QUERY: TADOQuery
     Connection = Conexao
     CursorType = ctStatic
@@ -15,7 +15,7 @@ object DMS: TDMS
   object DT: TDataSource
     DataSet = QueryGrid
     Left = 160
-    Top = 48
+    Top = 88
   end
   object QueryGrid: TADOQuery
     Connection = Conexao
@@ -210,5 +210,104 @@ object DMS: TDMS
     DataSet = GridLigacoes
     Left = 160
     Top = 312
+  end
+  object DT4: TDataSource
+    DataSet = GridVisitaPendente
+    Left = 160
+    Top = 384
+  end
+  object GridVisitaPendente: TADOQuery
+    Connection = Conexao
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'SELECT *  FROM VISITA_TECNICA WHERE STATUS = '#39'PENDENTE'#39)
+    Left = 96
+    Top = 384
+    object GridVisitaPendenteIDVISITA: TAutoIncField
+      FieldName = 'IDVISITA'
+      ReadOnly = True
+    end
+    object GridVisitaPendenteLOJAPROC: TIntegerField
+      FieldName = 'LOJAPROC'
+    end
+    object GridVisitaPendenteDATAINICIAL: TWideStringField
+      FieldName = 'DATAINICIAL'
+      FixedChar = True
+      Size = 50
+    end
+    object GridVisitaPendenteDATAAGENDAMENTO: TWideStringField
+      FieldName = 'DATAAGENDAMENTO'
+      FixedChar = True
+      Size = 50
+    end
+    object GridVisitaPendenteDATADEFINALIZACAO: TWideStringField
+      FieldName = 'DATADEFINALIZACAO'
+      FixedChar = True
+      Size = 50
+    end
+    object GridVisitaPendenteNUMERORAT: TIntegerField
+      FieldName = 'NUMERORAT'
+    end
+    object GridVisitaPendenteSTATUS: TWideStringField
+      FieldName = 'STATUS'
+      FixedChar = True
+      Size = 10
+    end
+    object GridVisitaPendenteASSUNTO: TWideStringField
+      FieldName = 'ASSUNTO'
+      FixedChar = True
+      Size = 1000
+    end
+  end
+  object GridVisitaAgendada: TADOQuery
+    Connection = Conexao
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'SELECT *  FROM VISITA_TECNICA WHERE STATUS = '#39'AGENDADA'#39
+      '')
+    Left = 96
+    Top = 464
+    object GridVisitaAgendadaIDVISITA: TAutoIncField
+      FieldName = 'IDVISITA'
+      ReadOnly = True
+    end
+    object GridVisitaAgendadaLOJAPROC: TIntegerField
+      FieldName = 'LOJAPROC'
+    end
+    object GridVisitaAgendadaDATAINICIAL: TWideStringField
+      FieldName = 'DATAINICIAL'
+      FixedChar = True
+      Size = 50
+    end
+    object GridVisitaAgendadaDATAAGENDAMENTO: TWideStringField
+      FieldName = 'DATAAGENDAMENTO'
+      FixedChar = True
+      Size = 50
+    end
+    object GridVisitaAgendadaDATADEFINALIZACAO: TWideStringField
+      FieldName = 'DATADEFINALIZACAO'
+      FixedChar = True
+      Size = 50
+    end
+    object GridVisitaAgendadaNUMERORAT: TIntegerField
+      FieldName = 'NUMERORAT'
+    end
+    object GridVisitaAgendadaSTATUS: TWideStringField
+      FieldName = 'STATUS'
+      FixedChar = True
+      Size = 10
+    end
+    object GridVisitaAgendadaASSUNTO: TWideStringField
+      FieldName = 'ASSUNTO'
+      FixedChar = True
+      Size = 1000
+    end
+  end
+  object DT5: TDataSource
+    DataSet = GridVisitaAgendada
+    Left = 160
+    Top = 464
   end
 end

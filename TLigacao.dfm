@@ -9405,7 +9405,6 @@ object GerarLigacao: TGerarLigacao
         Expanded = False
         FieldName = 'IDLIGACAO'
         Title.Caption = 'ID'
-        Width = -1
         Visible = False
       end
       item
@@ -9432,7 +9431,6 @@ object GerarLigacao: TGerarLigacao
         Expanded = False
         FieldName = 'DATAGERADA'
         Title.Caption = 'DATA'
-        Width = -1
         Visible = False
       end
       item

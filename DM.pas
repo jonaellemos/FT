@@ -44,6 +44,26 @@ type
     GridLigacoesPROTOCOLO: TWideStringField;
     GridLigacoesDATAGERADA: TWideStringField;
     GridLigacoesASSUNTO: TWideStringField;
+    DT4: TDataSource;
+    GridVisitaPendente: TADOQuery;
+    GridVisitaAgendada: TADOQuery;
+    DT5: TDataSource;
+    GridVisitaPendenteIDVISITA: TAutoIncField;
+    GridVisitaPendenteLOJAPROC: TIntegerField;
+    GridVisitaPendenteDATAINICIAL: TWideStringField;
+    GridVisitaPendenteDATAAGENDAMENTO: TWideStringField;
+    GridVisitaPendenteDATADEFINALIZACAO: TWideStringField;
+    GridVisitaPendenteNUMERORAT: TIntegerField;
+    GridVisitaPendenteSTATUS: TWideStringField;
+    GridVisitaAgendadaIDVISITA: TAutoIncField;
+    GridVisitaAgendadaLOJAPROC: TIntegerField;
+    GridVisitaAgendadaDATAINICIAL: TWideStringField;
+    GridVisitaAgendadaDATAAGENDAMENTO: TWideStringField;
+    GridVisitaAgendadaDATADEFINALIZACAO: TWideStringField;
+    GridVisitaAgendadaNUMERORAT: TIntegerField;
+    GridVisitaAgendadaSTATUS: TWideStringField;
+    GridVisitaPendenteASSUNTO: TWideStringField;
+    GridVisitaAgendadaASSUNTO: TWideStringField;
     procedure DataModuleCreate(Sender: TObject);
   private
     { Private declarations }
