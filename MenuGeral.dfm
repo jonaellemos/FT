@@ -22212,6 +22212,7 @@ object GeralMenu: TGeralMenu
       end
       object VISITATECNICA1: TMenuItem
         Caption = 'VISITA TECNICA'
+        OnClick = VISITATECNICA1Click
       end
       object RAT1: TMenuItem
         Caption = 'RAT'

@@ -53,6 +53,7 @@ type
     procedure Button1Click(Sender: TObject);
     procedure USUARIOS2Click(Sender: TObject);
     procedure ELEFONEMA1Click(Sender: TObject);
+    procedure VISITATECNICA1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -66,7 +67,8 @@ implementation
 
 {$R *.dfm}
 
-uses Login, PrincipalM, CTarefas, ConsultaTarefas, CadastroUsuario, TLigacao;
+uses Login, PrincipalM, CTarefas, ConsultaTarefas, CadastroUsuario, TLigacao,
+  FVisitaTecnica;
 
 procedure TGeralMenu.AREFAS1Click(Sender: TObject);
 begin
@@ -143,6 +145,11 @@ Login_Senha.Hide;
 Button1.Hide;
 titulo.Hide;
 end;
+end;
+
+procedure TGeralMenu.VISITATECNICA1Click(Sender: TObject);
+begin
+VisitaTecnica.Show;
 end;
 
 //Atualizei aqui

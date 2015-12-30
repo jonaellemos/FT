@@ -11,7 +11,8 @@ uses
   ConsultaTarefas in 'ConsultaTarefas.pas' {ConsultaTarefa},
   LoginT in 'LoginT.pas' {LoginService},
   CadastroUsuario in 'CadastroUsuario.pas' {CadastrarUsuario},
-  TLigacao in 'TLigacao.pas' {GerarLigacao};
+  TLigacao in 'TLigacao.pas' {GerarLigacao},
+  FVisitaTecnica in 'FVisitaTecnica.pas' {VisitaTecnica};
 
 {$R *.res}
 
@@ -26,5 +27,6 @@ begin
   Application.CreateForm(TConsultaTarefa, ConsultaTarefa);
   Application.CreateForm(TCadastrarUsuario, CadastrarUsuario);
   Application.CreateForm(TGerarLigacao, GerarLigacao);
+  Application.CreateForm(TVisitaTecnica, VisitaTecnica);
   Application.Run;
 end.
