@@ -64,6 +64,9 @@ type
     GridVisitaAgendadaSTATUS: TWideStringField;
     GridVisitaPendenteASSUNTO: TWideStringField;
     GridVisitaAgendadaASSUNTO: TWideStringField;
+    QueryTarefas: TADOQuery;
+    result1: TADOQuery;
+    result2: TADOQuery;
     procedure DataModuleCreate(Sender: TObject);
   private
     { Private declarations }

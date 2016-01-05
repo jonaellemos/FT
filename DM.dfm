@@ -140,7 +140,7 @@ object DMS: TDMS
   object DT2: TDataSource
     DataSet = GridTarefas
     Left = 160
-    Top = 224
+    Top = 248
   end
   object GridTarefas: TADOQuery
     Connection = Conexao
@@ -149,7 +149,7 @@ object DMS: TDMS
     SQL.Strings = (
       'SELECT *  FROM TAREFAS')
     Left = 96
-    Top = 224
+    Top = 248
     object GridTarefasDESCRICAO: TWideStringField
       FieldName = 'DESCRICAO'
       FixedChar = True
@@ -177,7 +177,7 @@ object DMS: TDMS
     SQL.Strings = (
       'SELECT *  FROM LIGACOES')
     Left = 96
-    Top = 304
+    Top = 328
     object GridLigacoesIDLIGACAO: TAutoIncField
       FieldName = 'IDLIGACAO'
       ReadOnly = True
@@ -209,12 +209,12 @@ object DMS: TDMS
   object DT3: TDataSource
     DataSet = GridLigacoes
     Left = 160
-    Top = 312
+    Top = 336
   end
   object DT4: TDataSource
     DataSet = GridVisitaPendente
     Left = 160
-    Top = 384
+    Top = 408
   end
   object GridVisitaPendente: TADOQuery
     Connection = Conexao
@@ -223,7 +223,7 @@ object DMS: TDMS
     SQL.Strings = (
       'SELECT *  FROM VISITA_TECNICA WHERE STATUS = '#39'PENDENTE'#39)
     Left = 96
-    Top = 384
+    Top = 408
     object GridVisitaPendenteIDVISITA: TAutoIncField
       FieldName = 'IDVISITA'
       ReadOnly = True
@@ -268,7 +268,7 @@ object DMS: TDMS
       'SELECT *  FROM VISITA_TECNICA WHERE STATUS = '#39'AGENDADA'#39
       '')
     Left = 96
-    Top = 464
+    Top = 488
     object GridVisitaAgendadaIDVISITA: TAutoIncField
       FieldName = 'IDVISITA'
       ReadOnly = True
@@ -308,6 +308,33 @@ object DMS: TDMS
   object DT5: TDataSource
     DataSet = GridVisitaAgendada
     Left = 160
-    Top = 464
+    Top = 488
+  end
+  object QueryTarefas: TADOQuery
+    Connection = Conexao
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'SELECT * FROM LOJAS')
+    Left = 96
+    Top = 192
+  end
+  object result1: TADOQuery
+    Connection = Conexao
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'SELECT * FROM LOJAS')
+    Left = 840
+    Top = 8
+  end
+  object result2: TADOQuery
+    Connection = Conexao
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'SELECT * FROM LOJAS')
+    Left = 840
+    Top = 56
   end
 end

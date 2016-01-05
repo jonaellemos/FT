@@ -2,7 +2,7 @@ object ConsultaTarefa: TConsultaTarefa
   Left = 0
   Top = 0
   Caption = 'Consulta de Tarefas'
-  ClientHeight = 472
+  ClientHeight = 492
   ClientWidth = 489
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -343,6 +343,46 @@ object ConsultaTarefa: TConsultaTarefa
     Font.Style = []
     ParentFont = False
   end
+  object Label6: TLabel
+    Left = 331
+    Top = 471
+    Width = 43
+    Height = 13
+    Caption = 'FALTAM:'
+  end
+  object lbfaltam: TLabel
+    Left = 375
+    Top = 471
+    Width = 18
+    Height = 13
+    Caption = '000'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clRed
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object cas: TLabel
+    Left = 396
+    Top = 471
+    Width = 65
+    Height = 13
+    Caption = 'FINALIZADO:'
+  end
+  object lbfinalizado: TLabel
+    Left = 461
+    Top = 471
+    Width = 18
+    Height = 13
+    Caption = '000'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clRed
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
   object descricao: TEdit
     Left = 132
     Top = 8
@@ -369,7 +409,6 @@ object ConsultaTarefa: TConsultaTarefa
       item
         Expanded = False
         FieldName = 'LOJA'
-        Width = 60
         Visible = True
       end
       item
@@ -415,6 +454,7 @@ object ConsultaTarefa: TConsultaTarefa
       Checked = True
       State = cbChecked
       TabOrder = 0
+      OnClick = CheckTodosClick
     end
     object CheckAntonio: TCheckBox
       Left = 79
@@ -427,10 +467,11 @@ object ConsultaTarefa: TConsultaTarefa
     object CheckJonael: TCheckBox
       Left = 230
       Top = 22
-      Width = 107
+      Width = 74
       Height = 17
       Caption = ' JONAEL'
       TabOrder = 2
+      OnClick = CheckJonaelClick
     end
     object CheckLayane: TCheckBox
       Left = 310
